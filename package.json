@@ -1,7 +1,13 @@
 {
   "name": "clusterchat",
   "description": "A simple multi process chat powered by express, socket.io, and clusterhub.",
-  "keywords": ["socket.io", "realtime", "cluster", "multi proces", "chat"],
+  "keywords": [
+    "socket.io",
+    "realtime",
+    "cluster",
+    "multi proces",
+    "chat"
+  ],
   "version": "0.1.0",
   "repository": {
     "type": "git",
@@ -13,13 +19,19 @@
     "node": ">=0.6.0"
   },
   "dependencies": {
-    "express": "x",
-    "socket.io": "x",
+    "express": "2.5.x",
+    "socket.io": "0.8.x",
     "socket.io-clusterhub": "0.1.x"
   },
-  "licenses": [ {
-    "type": "MIT",
-    "url" : "http://github.com/fent/clusterchat/raw/master/LICENSE"
-  }],
-  "private": true
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/fent/clusterchat/raw/master/LICENSE"
+    }
+  ],
+  "private": true,
+  "subdomain": "clusterchat",
+  "scripts": {
+    "start": "server.js"
+  }
 }
