@@ -1,0 +1,93 @@
+* { margin: 0; padding: 0 }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 15px;
+  font-size: 1.5em;
+    overflow: hidden;
+    color: #D1E1EB;
+  background-color: #283741;
+}
+
+ul { list-style-type: none }
+
+#container {
+  height: 100%;
+  position: relative;
+}
+
+#main {
+    position:absolute;
+    top:0;
+    bottom:70pt;
+  width: 90%;
+  border: 3px solid #0C2737;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#chat {
+    width: 77%;
+  padding: 3px;
+  height:90%;
+  overflow-y: auto;
+    display:inline-block;
+    float: right;
+}
+
+#online-users {
+   max-height:90%;
+    display:inline-block;
+  width:20%;
+  font-weight: bold;
+  padding: 3px;
+  overflow-y: auto;
+    border:1px solid silver;
+    float: right;
+}
+
+#bottom {
+  position: fixed;
+  bottom: 0;
+  height: 45pt;
+  margin-right: 5px;
+  margin-left: 10px;
+  right: 5px;
+  left: 5px;
+}
+
+input {
+  width: 90%;
+  border: 0;
+  font-size: 1.7em;
+  color: #0C2737;
+  background-color: #D1E1EB;
+}
+
+.user {
+    min-width: 150px;
+    font-weight: bold;
+}
+
+.user:before {
+    content: "<";
+    font-weight: normal;
+}
+
+.user:after {
+    content: ">";
+    font-weight: normal;
+}
+
+.msg {
+    width: 100%;
+}
+
+.stripe {
+    color: #D1D1D1;
+}
+​
