@@ -5,7 +5,6 @@ html, body {
 }
 
 body {
-  padding: 15px;
   font-size: 1.5em;
     overflow: hidden;
     color: #D1E1EB;
@@ -20,6 +19,7 @@ ul { list-style-type: none }
 }
 
 #main {
+  margin: 15px;
     position:absolute;
     top:0;
     bottom:70pt;
