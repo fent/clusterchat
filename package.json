@@ -30,7 +30,6 @@
     }
   ],
   "private": true,
-  "subdomain": "clusterchat",
   "scripts": {
     "start": "server.js"
   }
