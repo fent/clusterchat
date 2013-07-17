@@ -1,5 +1,5 @@
 var cluster = require('cluster');
-var store = new (require('socket.io-clusterhub'));
+var store = new (require('socket.io-clusterhub'))();
 //var numCPUs = require('os').cpus().length;
 var numCPUs = 4;
 
@@ -10,9 +10,11 @@ if (cluster.isMaster) {
   }
 
 } else {
-  var express = require('express')
-    , app = express.createServer()
-    , io = require('socket.io').listen(app)
+  var http = require('http');
+  var express = require('express');
+  var app = express();
+  var server = http.createServer(app);
+  var io = require('socket.io').listen(server);
 
   app.configure(function() {
     app.use(express.favicon());
@@ -23,7 +25,7 @@ if (cluster.isMaster) {
     res.sendfile(__dirname + '/index.html');
   });
 
-  app.listen(3000);
+  server.listen(3000);
   console.log('Listening on port 3000');
 
 
@@ -97,8 +99,6 @@ if (cluster.isMaster) {
       if (socket.name) {
         store.hub.lrem('users', 1, socket.name);
         io.sockets.emit('leave', socket.name);
-        queue = [];
-        if (typeof tid !== 'undefined') clearTimeout(tid);
       }
     });
 
