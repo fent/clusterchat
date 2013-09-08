@@ -16,7 +16,7 @@
   "author": "fent (https://github.com/fent)",
   "main": "./server.js",
   "dependencies": {
-    "express": "~3.3.4",
+    "express": "~3.4.0",
     "socket.io": "~0.9.16",
     "socket.io-clusterhub": "~0.2.0"
   },
